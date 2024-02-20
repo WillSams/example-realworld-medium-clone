@@ -1,23 +1,98 @@
 # ![RealWorld Example App](logo.png)
 
-> ### [YOUR_FRAMEWORK] codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
+**TypeScript, Vite, Reactjs, Redux Toolkit, Redux Sagas, Python, FastAPI, GraphQL, Boto3, AWS**
 
+[![Application Unit Tests](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/pr-validate.yml/badge.svg)](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/pr-validate.yml)
+[![Client Deployment](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-client.yml/badge.svg)](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-client.yml)
+[![Backend Deployment](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-backend.yml/badge.svg)](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-backend.yml)
 
-### [Demo](https://demo.realworld.io/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
+[![wakatime](https://wakatime.com/badge/github/WillSams/example-realworld-medium-clone.svg)](https://wakatime.com/badge/github/WillSams/example-realworld-medium-clone)
 
+React + FastAPI codebase containing real world examples (Graphql, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
-This codebase was created to demonstrate a fully fledged fullstack application built with **[YOUR_FRAMEWORK]** including CRUD operations, authentication, routing, pagination, and more.
+*[Demo](https://samswebs.com/conduit-example/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)*
 
-We've gone to great lengths to adhere to the **[YOUR_FRAMEWORK]** community styleguides & best practices.
+This codebase was created to demonstrate a fully fledged fullstack application built with React and FastAPI including Graphql API, authentication, routing, pagination, and more.
 
-For more information on how to this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
+## How it works
 
+> TODO
 
-# How it works
+## Pre-requisites
 
-> Describe the general architecture of your app here
+To run the service, you will need to install the following tools.
 
-# Getting started
+* [NodeJS](https://nodejs.org/en/)
+* [Docker](https://www.docker.com/)
 
-> npm install, npm start, etc.
+The below are optional but highly recommended:
+
+* [nvm](https://github.com/nvm-sh/nvm) - Used to manage NodeJS versions.
+* [Direnv](https://direnv.net/) - Used to manage environment variables.
+    - Install [direnv](https://direnv.net) for persisting environment variables needed for development.
+
+## Getting Started
+
+First, we'll need to set up our environment variables.  You can do this by either any of the methods mentioned in [/tools/environ-vars/ENV.md](./tools/environ-vars/ENV.md) but I recommend using [Direnv](https://direnv.net/).
+
+### Install Python Packages
+
+Execute the following in your terminal:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install --upgrade pip 
+pip install -r requirements.txt
+```
+
+### Install Node.js Packages
+
+Execute the following within your terminal:
+
+```bash
+nvm use                  # To eliminate any issues, install/use the version listed in .nvmrc. 
+npm i                    # install the packages needed for project
+cd ../frontend && npm i  # install the packages needed for the frontend
+cd ..                    # navigate back to the root of the repostiory
+```
+
+### Create the database
+
+Finally, let's create and seed a local instance of [AWS DynamoDB]():
+
+```bash
+docker-compose up -d    # runs the database in the background
+```
+
+During development, you can just execute `npm run dev:db-baseline` to refresh the database back to the original seed data.
+
+## Development
+
+To run both the frontend and backend concurrently:
+
+```bash
+docker-compose up -d  # runs the database in the background
+npm run dev
+```
+
+## Testing
+
+### Unit Tests
+
+> TODO
+
+### Functional Tests
+
+> TODO
+
+## Deployment
+
+### Deploying the Client to GitHub Pages
+
+> TODO
+
+### Deploying the Backend to AWS Lambda
+
+> TODO
 

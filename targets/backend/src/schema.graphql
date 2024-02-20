@@ -1,0 +1,21 @@
+schema {
+  query: Query
+  mutation: Mutation
+}
+
+type Article {
+  slug: ID!
+  title: String!
+  content: String!
+}
+
+type Query {
+  article(slug: ID!): Article
+  articles: [Article!]!
+}
+
+type Mutation {
+  createArticle(title: String!, content: String!): Article!
+  updateArticle(slug: ID!, title: String, content: String): Article!
+  deleteArticle(slug: ID!): Article!
+}
