@@ -6,6 +6,8 @@
 [![Client Deployment](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-client.yml/badge.svg)](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-client.yml)
 [![Backend Deployment](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-backend.yml/badge.svg)](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-backend.yml)
 
+[![wakatime](https://wakatime.com/badge/github/WillSams/example-realworld-medium-clone.svg)](https://wakatime.com/badge/github/WillSams/example-realworld-medium-clone)
+
 React + FastAPI codebase containing real world examples (Graphql, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
 
 *[Demo](https://samswebs.com/conduit-example/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)*
