@@ -1,0 +1,26 @@
+{
+   "scripts": {
+      "dev": "concurrently \"npm run dev:backend\" \"npm run dev:client\" \"npm run dev:db-admin\"",
+      "dev:db-admin": "./node_modules/dynamodb-admin/bin/dynamodb-admin.js --port 8082 --open",
+      "dev:db-baseline": "cd db && npm run refresh && npm run seed",
+      "dev:client": "cd targets/client && npm run dev",
+      "dev:backend": "cd targets/backend/src && uvicorn main:app --host localhost --port 8080 --reload",
+      "format:client": "cd targets/client && npm run format",
+      "format:backend": "cd targets/backend && ./scripts/format.sh",
+      "lint:client": "cd targets/client && npm run lint",
+      "lint:backend": "cd targets/backend && ./scripts/lint.sh",
+      "test:client": "cd targets/client && npm run test",
+      "test:backend": "cd targets/backend && ./scripts/test.sh",
+      "test:client:coverage": "cd targets/client && npm run test:coverage",
+      "test:backend:coverage": "cd targets/backend && ./scripts/test-coverage.sh",
+      "prepare": "husky install",
+      "clean": "node clean.js"
+   },
+   "dependencies": {
+      "concurrently": "^6.5.1",
+      "dynamodb-admin": "^4.6.1",
+      "husky": "^8.0.3",
+      "prettier": "^3.1.1",
+      "rimraf": "^5.0.5"
+   }
+}

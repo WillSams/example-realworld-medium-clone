@@ -1,0 +1,100 @@
+interface ActionTypes {
+  // Component actions
+  LOAD_COMPONENT: string;
+  COMPONENT_NOT_FOUND: string;
+  UNLOAD_COMPONENT: string;
+
+  LOAD_COMPONENT_SUCCESS: string;
+  LOAD_COMPONENT_ERROR: string;
+  LOAD_COMPONENT_FAILED: string;
+
+  // Shared API Requests
+  API_REQUEST_ERROR: string;
+  API_REQUEST_UNAUTHORIZED: string;
+  API_REQUEST_NOT_FOUND: string;
+
+  API_REQUEST: string;
+  API_REQUEST_DONE: string;
+
+  API_TEST_ACTION: string;
+
+  // Shared Alert
+  SET_ALERT: string;
+  CLEAR_ALERT: string;
+
+  // Shared Confirmation
+  OPEN_CONFIRMATION_MODAL: string;
+  CLOSE_CONFIRMATION_MODAL: string;
+  CONFIRM_CONFIRMATION_MODAL: string;
+  REJECT_CONFIRMATION_MODAL: string;
+
+  // Site Components - Invalid Route Component Actions
+  INVALID_ROUTE_COMPONENT: string;
+
+  // Site Components - Auth Component Actions
+  AUTH_COMPONENT: string;
+  LOGIN: string;
+  LOGOUT: string;
+
+  // Site Components
+  LOAD_HOME_COMPONENT: string;
+  LOAD_HOME_COMPONENT_SUCCESS: string;
+  LOAD_HOME_COMPONENT_FAILED: string;
+
+  UNLOAD_HOME_COMPONENT: string;
+  UNLOAD_HOME_COMPONENT_SUCCESS: string;
+  UNLOAD_HOME_COMPONENT_FAILED: string;
+
+  HOME_COMPONENT: string;
+}
+
+export const actionTypes: ActionTypes = {
+  LOAD_COMPONENT: 'shared/LOAD_COMPONENT',
+  COMPONENT_NOT_FOUND: 'shared/COMPONENT_NOT_FOUND',
+  UNLOAD_COMPONENT: 'shared/UNLOAD_COMPONENT',
+
+  LOAD_COMPONENT_SUCCESS: 'shared/LOAD_COMPONENT_SUCCESS',
+  LOAD_COMPONENT_ERROR: 'shared/LOAD_COMPONENT_ERROR',
+  LOAD_COMPONENT_FAILED: 'shared/LOAD_COMPONENT_FAILED',
+
+  // Shared API Requests
+  API_REQUEST_ERROR: 'shared/API_REQUEST_ERROR',
+  API_REQUEST_UNAUTHORIZED: 'shared/API_REQUEST_UNAUTHORIZED',
+  API_REQUEST_NOT_FOUND: 'shared/API_REQUEST_NOT_FOUND',
+
+  API_REQUEST: 'shared/API_REQUEST',
+  API_REQUEST_DONE: 'shared/API_REQUEST_DONE',
+
+  API_TEST_ACTION: 'shared/API_TEST_ACTION',
+
+  //Shared Alert
+  SET_ALERT: 'shared/SET_ALERT',
+  CLEAR_ALERT: 'shared/CLEAR_ALERT',
+
+  // Shared Confirmation
+  OPEN_CONFIRMATION_MODAL: 'shared/OPEN_CONFIRMATION_MODAL',
+  CLOSE_CONFIRMATION_MODAL: 'shared/CLOSE_CONFIRMATION_MODAL',
+  CONFIRM_CONFIRMATION_MODAL: 'shared/CONFIRM_CONFIRMATION_MODAL',
+  REJECT_CONFIRMATION_MODAL: 'shared/REJECT_CONFIRMATION_MODAL',
+
+  // Site Components - Invalid Route Component Actions
+  INVALID_ROUTE_COMPONENT: 'site/shared/INVALID_ROUTE_COMPONENT',
+
+  // Site Components - Auth Component Actions
+  AUTH_COMPONENT: 'site/auth/AUTH_COMPONENT',
+  LOGIN: 'site/auth/LOGIN',
+  LOGOUT: 'site/auth/LOGOUT',
+
+  // Site Components - Invalid Route Component Actions
+  LOAD_HOME_COMPONENT: 'site/home/LOAD_HOME_COMPONENT',
+  LOAD_HOME_COMPONENT_SUCCESS: 'site/home/LOAD_HOME_COMPONENT_SUCCESS',
+  LOAD_HOME_COMPONENT_FAILED: 'site/home/LOAD_HOME_COMPONENT_SUCCESS',
+
+  UNLOAD_HOME_COMPONENT: 'site/home/UNLOAD_HOME_COMPONENT',
+  UNLOAD_HOME_COMPONENT_SUCCESS: 'site/home/UNLOAD_HOME_COMPONENT_SUCCESS',
+  UNLOAD_HOME_COMPONENT_FAILED: 'site/home/UNLOAD_HOME_COMPONENT_SUCCESS',
+
+  HOME_COMPONENT: 'site/home/HOME_COMPONENT',
+};
+
+export type { ActionTypes };
