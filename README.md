@@ -1,6 +1,6 @@
 # ![RealWorld Example App](logo.png)
 
-**TypeScript, Vite, Reactjs, Redux Toolkit, Redux Sagas, Python, FastAPI, GraphQL, Dynastic, AWS**
+**TypeScript, Vite, Reactjs, Redux Toolkit, Redux Sagas, Python, FastAPI, GraphQL, Boto3, AWS**
 
 [![Application Unit Tests](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/pr-validate.yml/badge.svg)](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/pr-validate.yml)
 [![Client Deployment](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-client.yml/badge.svg)](https://github.com/WillSams/example-ts-react-with-python/actions/workflows/build-and-deploy-client.yml)
